@@ -12,8 +12,15 @@ formPedido.addEventListener('submit', (event) => {
   const nome = document.getElementById('nome').value;
   const cpf = document.getElementById('cpf').value;
 
-  // Validar nome e CPF (opcional)
+  // Validar nome e CPF
   if (!nome || !cpf) {
+    alert("Por favor, preencha todos os campos.");
+    return;
+  }
+
+  // Verificar se o CPF é válido
+  if (!validarCPF(cpf)) {
+    alert("CPF inválido. Por favor, insira um CPF válido.");
     return;
   }
 
@@ -26,7 +33,7 @@ formPedido.addEventListener('submit', (event) => {
 
   adicionarPedido(nome, cpf);
 
-  // Limpar campos após adicionar (opcional)
+  // Limpar campos após adicionar
   document.getElementById('nome').value = "";
   document.getElementById('cpf').value = "";
 });
@@ -53,6 +60,13 @@ function adicionarPedido(nome, cpf) {
 
   // Recalcular e exibir a soma total dos preços dos pedidos
   exibirTotal();
+}
+
+function validarCPF(cpf) {
+  // Algoritmo de validação de CPF
+  // Você pode implementar seu próprio algoritmo ou utilizar uma biblioteca de validação de CPF
+  // Por simplicidade, vamos apenas verificar se o CPF tem 11 dígitos
+  return cpf.length === 11;
 }
 
 function gerarNumeroPedido() {
