@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Pedidos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="admin.js"></script> <!-- Carregar admin.js antes de logout.js -->
+    <script src="logout.js"></script>
+    
+    <h1>Gerenciador de Pedidos</h1>
+    <form id="form-pedido">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <br>
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required>
+        <br>
+        <br>
+        <button type="submit">Adicionar</button>
+    </form>
+    <br>
+    <h2 id="titulo-registros">Pedidos Salvos</h2>
+    <ul id="lista-pedidos"></ul>
+    <div id="total"></div>
+    <a href="index.html"><button>Voltar</button></a>
+    <script src="scriptRegistro.js"></script>
+    <div id="user-info">
+        <span id="username-info"></span>
+        <button id="logout-button">Sair</button>
+    </div>
+    <script src="scriptRegistro.js"></script>
+  <script src="logout.js"></script>
+</body>
+</html>

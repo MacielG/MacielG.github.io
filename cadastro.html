@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Usuário</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Cadastro de Usuário</h1>
+  <form id="form-cadastro">
+    <label for="username">Usuário:</label>
+    <input type="text" id="username" name="username" required>
+    <br>
+    <label for="password">Senha:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <button id="cadastro-button" type="button">Cadastrar</button>
+    <a href="index.html"><button type="button">Voltar</button></a> <!-- Adicionando botão "Voltar" -->
+  </form>
+  <script src="cadastro.js"></script> <!-- Movendo a importação do script para o final -->
+</body>
+</html>
